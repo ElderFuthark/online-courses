@@ -1,0 +1,3 @@
+# Furthering my education...
+
+All of the folders here correspond to free courses I've taken from open education platforms such as Coursera and edX.
