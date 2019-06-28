@@ -17,8 +17,9 @@ SOURCES = main.c memory.c
 INCLUDES = ../include/common
 ifeq ($(PLATFORM), MSP432)
 	# Target specific source and header files
-     SOURCES += interrupts_msp432p401r_gcc.c \ 
-	startup_msp432p401r_gcc.c \ 
-	system_msp432p401r.c
-     INCLUDES += ../include/msp432 ../include/CMSIS
+     SOURCES += interrupts_msp432p401r_gcc.c \
+			 startup_msp432p401r_gcc.c \
+			 system_msp432p401r.c
+     INCLUDES += ../include/msp432 \
+			  ../include/CMSIS
 endif

@@ -35,7 +35,7 @@ ifeq ($(PLATFORM), HOST)		# Host machine
      LD = /usr/bin/ld
      # Compiler Flags and Defines
      CFLAGS = -Wall -Werror -g -O0 -std=c99 \
-		    -DHOST -I $(INCLUDES)
+		    -DHOST -I$(INCLUDES)
      LDFLAGS = -Wl,-Map=$(TARGET).map
 else						# Target MSP432
      CC = /usr/bin/arm-none-eabi-gcc
@@ -53,8 +53,8 @@ else						# Target MSP432
      CFLAGS = -Wall -Werror -g -O0 -std=c99 \
 		    -mcpu=$(CPU) -march=$(ARCH) -mthumb \
 		    -mfloat-abi=$(FABI) -mfpu=$(FPU) \
-		    -mspecs=$(SPECS) -DMSP432 \
-		    -I $(INCLUDES)
+		    --specs=$(SPECS) -DMSP432 \
+		    $(foreach d, $(INCLUDES), -I$d)    # Iterates through INCLUDES directoreis and prepends them with -I.
      LDFLAGS = -Wl,-Map=$(TARGET).map -T $(LINKER_FILE)
 	
 endif
@@ -72,7 +72,6 @@ OBJS = $(SOURCES:.c=.o)
 
 %.i : %.c
 	$(CC) $(CPPFLAGS) $< $(CFLAGS) -o $@
-
 # Build rules
 .PHONY: compile-all build clean
 compile-all: $(SOURCES)
