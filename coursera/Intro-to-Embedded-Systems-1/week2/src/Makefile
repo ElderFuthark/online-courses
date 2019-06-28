@@ -75,8 +75,8 @@ OBJS = $(SOURCES:.c=.o)
 # Build rules
 .PHONY: compile-all build clean
 compile-all: $(SOURCES)
-	$(CC) $(CFLAGS) -c $^ 
-build: $(OBJS)
+	$(CC) $(CFLAGS) -c $^
+build: compile-all
 	$(CC) $(OBJS) $(CFLAGS) $(LDFLAGS) -o $(TARGET).out
 clean:
-	rm -f $(OBJS) $(TARGET).out $(TARGET).map *.asm *.i *.d
+	rm -f *.o $(TARGET).out $(TARGET).map *.asm *.i *.d
