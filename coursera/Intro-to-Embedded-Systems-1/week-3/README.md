@@ -15,25 +15,25 @@ git clone https://github.com/afosdick/ese-coursera-course1.git
 ```
 The folder contains 4 files:
 
-* *main.c* - Main file you are to work with
-* *misc.c* - File that declares some data and defines some functions
-* *misc.h* - File that contains function declarations and macros
-* *msp432p401r.lds* - Linker file for the msp432
+* **main.c** - Main file you are to work with
+* **misc.c** - File that declares some data and defines some functions
+* **misc.h** - File that contains function declarations and macros
+* **msp432p401r.lds** - Linker file for the msp432
 
-Given the code and linker file provided from the zip file, you will need to specify where the listed symbols will be placed in our program.Once you have figured out your memory space, you can take the *Programming Assignment Quiz* where you will provide details about specific symbol elements including:
+Given the code and linker file provided from the zip file, you will need to specify where the listed symbols will be placed in our program.Once you have figured out your memory space, you can take the **Programming Assignment Quiz** where you will provide details about specific symbol elements including:
 
-* *Location Top segment or Type* - Code, Data, Peripheral, Register, None
-* *Location Sub-segment* - Stack, Heap, BSS, Data, const/rodata, None
-* *Access Permissions* - Read (R), Write (W) Read-write (RW), None
-* *Lifetime* - Function/Block, Program, Indefinite, None
+* **Location Top segment or Type** - Code, Data, Peripheral, Register, None
+* **Location Sub-segment** - Stack, Heap, BSS, Data, const/rodata, None
+* **Access Permissions** - Read (R), Write (W) Read-write (RW), None
+* **Lifetime** - Function/Block, Program, Indefinite, None
 
 ## Suggestions:
 There are multiple suggestions of tools you can use to help determine these answers besides just inspection.
 
-1. You may generate a *.map* file using the linker flag -Wl,-Map=main.map
+1. You may generate a **.map** file using the linker flag -Wl,-Map=main.map
    * With this file you can look find certain assignments listed in the code.
-2. You can use the GCC binary utility *nm* to investigate the code symbols
+2. You can use the GCC binary utility **nm** to investigate the code symbols
    * This will print code/data symbols with the memory properties
-3. You can use the GCC toolchain and dump a file to assembly with the *-S* option.
+3. You can use the GCC toolchain and dump a file to assembly with the **-S** option.
    * This will provide some details on how a piece of data is allocated
 4. You can add code to this to investigate the addresses that have been assigned to the variables and print those to the terminal
