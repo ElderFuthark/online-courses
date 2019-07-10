@@ -27,7 +27,7 @@
 
 # Platform Overrides
 PLATFORM =				# Specified via command line
-TARGET = c1m2
+TARGET = main
 ifeq ($(PLATFORM), HOST)		# Host machine
      CC = /usr/bin/gcc
      # Architectures Specific Flags
