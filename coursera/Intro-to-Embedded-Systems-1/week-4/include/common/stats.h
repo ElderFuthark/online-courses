@@ -9,32 +9,67 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
- *
- * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @file stats.h 
+ * @brief Contains function prototypes for program functions found in main.c
+ * @author Elder Futhark
+ * @date  July, 21, 2019
  *
  */
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
+/*
+* @func: print_statistics()
+* @brief: Prints statistics of an array. These include the minimum, maximum, mean, and median.
+* @params: a char array.
+* @returns: void
+*/
 
-/**
- * @brief <Add Brief Description of Function Here>
- *
- * <Add Extended Description Here>
- *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
- */
+void print_statistics(char bigstring[]);
 
+/*
+* @func: print_array()
+* @brief: Prints a given array.
+* @params: a char array and its length in integer form.
+* @returns: void
+*/
+
+void print_array(char bigstring[], int length);
+
+/*
+* @func: find_median()
+* @brief: Finds the median of a char array.
+* @params: a char array and its length in integer form.
+* @returns: median (cast as char)
+*/
+
+char find_median(char bigstring[], int length);
+
+/*
+* @func: find_mean()
+* @brief: Finds the mean of a char array.
+* @params: a char array and its length in integer form.
+* @returns: mean (cast as char)
+*/
+
+char find_mean(char bigstring[], int length);
+
+/*
+* @func: find_maximum()
+* @brief: Finds the maximum of a char array.
+* @params: a char array and its length in integer form.
+* @returns: maximum (largest ASCII value cast as char)
+*/
+
+char find_maximum(char bigstring[], int length);
+
+/*
+* @func: find_minimum()
+* @brief: Finds the minimum of a char array.
+* @params: a char array and its length in integer form.
+* @returns: minimum (smallest ASCII value cast as char)
+*/
+
+char find_minimum(char bigstring[], int length);
 
 #endif /* __STATS_H__ */

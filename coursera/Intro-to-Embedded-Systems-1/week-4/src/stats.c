@@ -9,17 +9,11 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
- *
- * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
- *
+ * @file stats.c
+ * @brief Contains function definitions for prototypes in stats.h
+ * @author Elder Futhark
+ * @date 7/21/19
  */
-
-
 
 #include <stdio.h>
 #include "stats.h"
