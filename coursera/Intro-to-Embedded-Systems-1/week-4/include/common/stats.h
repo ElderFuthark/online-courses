@@ -25,7 +25,7 @@
 * @returns: void
 */
 
-void print_statistics(char bigstring[]);
+void print_statistics(unsigned char test[]);
 
 /*
 * @func: print_array()
@@ -34,7 +34,7 @@ void print_statistics(char bigstring[]);
 * @returns: void
 */
 
-void print_array(char bigstring[], int length);
+void print_array(unsigned char test[], int length);
 
 /*
 * @func: find_median()
@@ -43,7 +43,7 @@ void print_array(char bigstring[], int length);
 * @returns: median (cast as char)
 */
 
-char find_median(char bigstring[], int length);
+unsigned char find_median(unsigned char test[], int length);
 
 /*
 * @func: find_mean()
@@ -52,7 +52,7 @@ char find_median(char bigstring[], int length);
 * @returns: mean (cast as char)
 */
 
-char find_mean(char bigstring[], int length);
+unsigned char find_mean(unsigned char test[], int length);
 
 /*
 * @func: find_maximum()
@@ -61,7 +61,7 @@ char find_mean(char bigstring[], int length);
 * @returns: maximum (largest ASCII value cast as char)
 */
 
-char find_maximum(char bigstring[], int length);
+unsigned char find_maximum(unsigned char test[], int length);
 
 /*
 * @func: find_minimum()
@@ -70,6 +70,6 @@ char find_maximum(char bigstring[], int length);
 * @returns: minimum (smallest ASCII value cast as char)
 */
 
-char find_minimum(char bigstring[], int length);
+unsigned char find_minimum(char test[], int length);
 
 #endif /* __STATS_H__ */
