@@ -25,7 +25,7 @@
 * @returns: void
 */
 
-void print_statistics(unsigned char test[]);
+void print_statistics(unsigned char *test);
 
 /*
 * @func: print_array()
@@ -34,7 +34,7 @@ void print_statistics(unsigned char test[]);
 * @returns: void
 */
 
-void print_array(unsigned char test[], int length);
+void print_array(unsigned char *test, int length);
 
 /*
 * @func: find_median()
@@ -43,7 +43,7 @@ void print_array(unsigned char test[], int length);
 * @returns: median (cast as char)
 */
 
-unsigned char find_median(unsigned char test[], int length);
+unsigned char find_median(unsigned char *test, int length);
 
 /*
 * @func: find_mean()
@@ -52,7 +52,7 @@ unsigned char find_median(unsigned char test[], int length);
 * @returns: mean (cast as char)
 */
 
-unsigned char find_mean(unsigned char test[], int length);
+unsigned char find_mean(unsigned char *test, int length);
 
 /*
 * @func: find_maximum()
@@ -61,7 +61,7 @@ unsigned char find_mean(unsigned char test[], int length);
 * @returns: maximum (largest ASCII value cast as char)
 */
 
-unsigned char find_maximum(unsigned char test[], int length);
+unsigned char find_maximum(unsigned char *test, int length);
 
 /*
 * @func: find_minimum()
@@ -70,6 +70,6 @@ unsigned char find_maximum(unsigned char test[], int length);
 * @returns: minimum (smallest ASCII value cast as char)
 */
 
-unsigned char find_minimum(char test[], int length);
+unsigned char find_minimum(unsigned char *test, int length);
 
 #endif /* __STATS_H__ */
